@@ -33,12 +33,12 @@ class TestAbs(unittest.TestCase):
     
     def test_link2(self):
         link = "http://suninjuly.github.io/registration2.html"
-        browser = webdriver.Chrome()
+        browser = webdriver.Firefox()
         browser.get(link)
 
-        input1 = browser.find_element(By.CLASS_NAME, "form-control.first:required")
-        input2 = browser.find_element(By.CLASS_NAME, "form-control.second:required")
-        input3 = browser.find_element(By.CLASS_NAME, "form-control.third:required")
+        input1 = browser.find_element(By.CSS_SELECTOR, "form-control.first:required")
+        input2 = browser.find_element(By.CSS_SELECTOR, "form-control.second:required")
+        input3 = browser.find_element(By.CSS_SELECTOR, "form-control.third:required")
 
         input1.send_keys("Заполено")
         input2.send_keys("Заполено")
